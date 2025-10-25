@@ -18,7 +18,7 @@ export default function Brands() {
     <div className=' mt-[72px]  '>
         
         <Marquee   gradient={false} speed={50} pauseOnHover={true} direction="left"> 
-            {allBrands.map((logo , index) => <Image className={"mx-[93px] "}  src={logo} width={100} height={100} alt="logo" /> )}
+            {allBrands.map((logo , index) => <Image className={"mx-[93px] cursor-pointer   "}  src={logo} width={100} height={100} alt="logo" /> )}
         </Marquee>
     </div>
   )
