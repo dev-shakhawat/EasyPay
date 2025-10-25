@@ -15,11 +15,11 @@ import logo6 from "../../assets/images/brand6.png";
 export default function Brands() {
     const allBrands = [logo1,logo2,logo3,logo4,logo5,logo6];
   return (
-    <div className=' mt-[72px]  '>
+    <section className=' mt-[72px]  '>
         
         <Marquee   gradient={false} speed={50} pauseOnHover={true} direction="left"> 
             {allBrands.map((logo , index) => <Image className={"mx-[93px] cursor-pointer   "}  src={logo} width={100} height={100} alt="logo" /> )}
         </Marquee>
-    </div>
+    </section>
   )
 }

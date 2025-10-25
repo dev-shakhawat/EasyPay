@@ -38,7 +38,7 @@ export default function Howto() {
         },
     ]
   return (
-    <div className=" mt-30 bg-[#f6f6f6] py-30  ">
+    <section className=" mt-30 bg-[#f6f6f6] py-30  ">
       <Container>
         {/* header */}
         <div className="flex  justify-between items-end   ">
@@ -61,6 +61,6 @@ export default function Howto() {
         <Image src={steper} width={100} height={100} alt="logo" className=" mt-6 w-full rounded-[12px]   " />
 
       </Container>
-    </div>
+    </section>
   );
 }

@@ -43,7 +43,7 @@ export default function Features() {
     ]
 
   return (
-    <div className='mt-[120px]'>
+    <section className='mt-[120px]'>
         
         <Container>
 
@@ -56,6 +56,6 @@ export default function Features() {
             </div>
              
         </Container>
-    </div>
+    </section>
   )
 }
