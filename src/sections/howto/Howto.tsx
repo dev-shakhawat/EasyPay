@@ -38,10 +38,10 @@ export default function Howto() {
         },
     ]
   return (
-    <div className=" mt-30 bg-[#f6f6f6]  ">
+    <div className=" mt-30 bg-[#f6f6f6] py-30  ">
       <Container>
         {/* header */}
-        <div className="flex pt-30 justify-between items-end   ">
+        <div className="flex  justify-between items-end   ">
           <SectionHead title="how it works" subtitle="Make payments, transfers, and more in 3 simple steps" customeStyle=" " subtitleStyle="max-w-[561px]" />
 
           {/* button */}

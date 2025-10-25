@@ -4,6 +4,24 @@
 @theme {
     --font-urbanist: "Urbanist", sans-serif;
     --font-outfit: "Outfit", sans-serif;
+
+    --animate-security: security 1s alternate   infinite;
+    @keyframes security {
+    0%  {
+      transform: scale(0.3);
+      -webkit-transform: scale(0.3);
+      -moz-transform: scale(0.3);
+      -ms-transform: scale(0.3);
+      -o-transform: scale(0.3);
+}
+    100% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+}
+  }
 }
 
 
@@ -12,3 +30,4 @@
 .cnmPeragraph{
   @apply text-base text-[#4D525F] leading-[150%] font-normal
 }
+
