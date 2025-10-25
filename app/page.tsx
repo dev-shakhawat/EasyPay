@@ -1,7 +1,7 @@
 import Banner from "@/src/sections/banner/Banner";
+import Brands from "@/src/sections/brands/Brands";
 import Features from "@/src/sections/features/Features";
-import NavBar from "@/src/sections/nav/NavBar";
-import Image from "next/image";
+import NavBar from "@/src/sections/nav/NavBar"; 
 
 export default function Home() {
   return (
@@ -14,6 +14,12 @@ export default function Home() {
 
       {/* features */}
       <Features/>
+
+      {/* brands */}
+      <Brands/>
+
     </>
   );
 }
+
+
