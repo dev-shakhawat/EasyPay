@@ -5,3 +5,10 @@
     --font-urbanist: "Urbanist", sans-serif;
     --font-outfit: "Outfit", sans-serif;
 }
+
+
+
+/* common css */
+.cnmPeragraph{
+  @apply text-base text-[#4D525F] leading-[150%] font-normal
+}

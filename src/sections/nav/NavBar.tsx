@@ -23,7 +23,8 @@ export default function NavBar() {
   }, []);
 
   return (
-    <nav className={`py-[36.5px] w-full fixed top-0 left-0 z-10 ${ isScrolled ? "bg-[radial-gradient(circle_at_top_left,_#dfe7ff_0%,_#fffbe7_40%,_#f2e5ff_100%)]" : "bg-transparent"}  `}>
+    <nav className={` w-full fixed  left-0 z-10 transition-all ease-in-out duration-300    ${ isScrolled ? "bg-[radial-gradient(circle_at_top_left,_#dfe7ff_0%,_#fffbe7_40%,_#f2e5ff_100%)] top-0 py-[20px]" : "bg-transparent top-6 py-[36.5px] "}  `}>
+       
       <Container>
         <div className="flex items-center justify-between  ">
           {/* logo */}
