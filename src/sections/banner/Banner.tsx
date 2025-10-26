@@ -17,29 +17,32 @@ import Container from "@/src/components/common/Container";
 
 export default function Banner() {
   return (
-    <section style={{ backgroundImage: `url(${bannerbg.src})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", }} className=" rounded-[30px] m-6   " >
+    <section style={{ backgroundImage: `url(${bannerbg.src})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", }} className=" banner " >
       
       <Container>
 
-        <div className="flex relative  ">
+        <div className="lg:flex  relative  ">
 
             {/* banner text */}
-            <motion.div  initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="max-w-[638px] pb-[159px] ">
-              <div className="">
+            <motion.div  initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="xl:max-w-[638px] xl:pb-[159px] pb-5 sm:pb-10 md:pb-20 lg:pb-30 ">
+              <div className="px-1 md:px-2 xl:px-0">
 
-                  <span className="mt-[201px] inline-block font-outfit font-semibold text-base text-[#787878] leading-[150%] uppercase    ">easy payment</span>
+                  <span className="bannerTitle   ">
+                    easy payment 
+                  </span>
+
                   <div className="relative ">
                     
-                    <p className="font-urbanist font-bold text-[64px] text-[#01081B] leading-[120%]  ">Pay fast and smarter from anywhere</p>
-                    <Image src={bannervictor} width={100} height={100} alt="logo" className=" absolute top-17 right-5 w-[490px]   " />
+                    <p className="bnnerhead  ">Pay fast and smarter from anywhere</p>
+                    <Image src={bannervictor} width={100} height={100} alt="logo" className=" absolute xl:top-17 top-11 lg:top-13 xl:right-5 right-45 lg:right-3 xl:w-[490px] md:w-[300px] lg:w-[390px]   hidden md:inline-block   " />
 
                   </div>
 
-                  <p className="mt-3 font-outfit text-lg text-[#4D525F] leading-[150%] max-w-[490px]   "> 
+                  <p className="bannerText  "> 
                     Experience the future of payments: fast, secure, and tailored for the next generation's convenience and trust.
                   </p>
 
-                  <div className="flex gap-2 mt-12 ">
+                  <div className="flex justify-center lg:justify-start gap-2 xl:mt-12 lg:mt-10 md:mt-8 mt-6   ">
                     <Image src={appstore} width={100} height={100} alt="logo" className=" max-w-[144px]   " />
                     <Image src={playstore} width={100} height={100} alt="logo" className=" max-w-[144px]   " />
                   </div> 
@@ -49,8 +52,8 @@ export default function Banner() {
             </motion.div>
             
             {/* banner image */}
-            <Image priority src={graphic} width={100} height={100} alt="bannergraphic" className=" w-[643px]   absolute bottom-0 -right-[56px] object-cover   " />
- 
+            <Image priority src={graphic} width={100} height={100} alt="bannergraphic" className="  w-[643px] lg:w-[550px] xl:w-[643px]    lg:absolute bottom-0 xl:-right-[56px] lg:-right-[0px] object-cover   " />
+
 
 
         </div>

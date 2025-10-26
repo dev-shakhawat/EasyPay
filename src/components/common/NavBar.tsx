@@ -1,16 +1,21 @@
-"use client"; 
+"use client";
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import Container from "./Container";
 import Image from "next/image";
+import Link from "next/link";
 
 // images
 import logo from "../../assets/images/logo.png";
-import Link from "next/link"; 
+
+// icons
+import { CiMenuFries } from "react-icons/ci";
+import { IoCloseOutline } from "react-icons/io5";
 
 export default function NavBar() {
-  const navItems = ["Features", "Pricing", "Security", "Benifits"];
+  const navItems = ["Features", "Pricing", "Security", "Benefits"];
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,35 +26,67 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(()=> {
+      window.addEventListener("scroll", () => { setIsMenuOpen(false); })
+
+      return () => { window.removeEventListener("scroll", () => { setIsMenuOpen(false); }) }
+  } , [])
+
   return (
-    <motion.nav 
-      initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-      className={` w-full fixed  left-0 z-10 transition-all ease-in-out duration-300    ${
-        isScrolled
-          ? "bg-[radial-gradient(circle_at_top_left,_#dfe7ff_0%,_#fffbe7_40%,_#f2e5ff_100%)] top-0 py-[20px]"
-          : "bg-transparent top-6 py-[36.5px] "
-      }  `}
-    >
+    <motion.nav initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
+      className={`w-full px-2 lg:px-5 xl:px-0 fixed left-0 z-50 transition-all ease-in-out duration-300  xl:py-6 lg:py-5 md:py-4 sm:py-3 py-2 ${ isScrolled
+          ? "bg-[radial-gradient(circle_at_top_left,_#dfe7ff_0%,_#fffbe7_40%,_#f2e5ff_100%)] top-0  "
+          : "bg-transparent top-6    "  }`} >
       <Container>
-        <div className="flex items-center justify-between  flex-wrap md:flex-nowrap gap-4 md:gap-0 px-4 sm:px-6 md:px-8 ">
-          {/* logo */}
-          <Image src={logo} width={100} height={100} alt="logo" className="w-[80px] sm:w-[90px] md:w-[100px] h-auto" />
+        <div className="flex items-center justify-between">
+
+          {/* Logo */}
+          <Link href="/">
+             <Image src={logo} width={100} height={100} alt="logo" priority />
+          </Link>
 
           {/* nav items */}
-          <ul className="flex gap-4 sm:gap-6 md:gap-8 flex-wrap justify-center md:justify-start">
-            {navItems.map((item, index) => (
+          <ul className="lg:flex hidden gap-10">
+            {navItems.map((item, index) => ( 
+
               <li key={index}>
-                <Link href="#" className=" font-urbanist font-semibold text-sm sm:text-base md:text-lg text-[#4D525F]    ">
-                  {item}
-                </Link>
+                <Link  href={`#${item.toLowerCase()}`}
+                  className="font-urbanist font-semibold text-lg text-[#4D525F] hover:text-[#2E68FD] transition-colors duration-200" > {item} </Link>
               </li>
             ))}
           </ul>
 
-          {/* contact btn */}
-          <button className="py-2 sm:py-2.5 md:py-3 px-4 sm:px-5 md:px-6 h-fit leading-[150%] rounded-[20px] sm:rounded-[22px] md:rounded-[25px] bg-[#2E68FD] text-white font-semibold text-sm sm:text-base font-outfit ">Contact Us</button>
+          {/* Contact Button  */}
+          <button className="lg:flex hidden py-3 px-6 h-fit leading-[150%] rounded-[25px] bg-[#2E68FD] text-white font-semibold text-base font-outfit hover:bg-[#1d50c7] transition-colors duration-200"> Contact Us </button>
 
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden flex items-center">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-[#4D525F] focus:outline-none cursor-pointer   " >
+              {isMenuOpen ? (
+                <IoCloseOutline className="text-3xl" />
+              ) : (
+                <CiMenuFries className="text-3xl" />
+              )}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu Dropdown */}
+        {isMenuOpen && (
+          <motion.div  initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}  exit={{ opacity: 0, y: -10 }}
+            className="lg:hidden mt-4 bg-white/90 backdrop-blur-md rounded-xl shadow-lg p-6 absolute top-11 left-0 w-full" >
+            <ul className="flex flex-col gap-4">
+              {navItems.map((item, index) => (
+                <li key={index}>
+                  <Link href={`#${item.toLowerCase()}`}  className="font-urbanist font-semibold text-base text-[#4D525F] hover:text-[#2E68FD] transition-colors duration-200" onClick={() => setIsMenuOpen(false)} > {item} </Link>
+                </li>
+              ))}
+            </ul>
+            <button className="mt-6 w-full py-3 px-6 rounded-[25px] bg-[#2E68FD] text-white font-semibold font-outfit text-sm">
+              Contact Us
+            </button>
+          </motion.div>
+        )}
       </Container>
     </motion.nav>
   );
