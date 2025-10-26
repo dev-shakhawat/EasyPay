@@ -34,9 +34,9 @@ export default function NavBar() {
 
   return (
     <motion.nav initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-      className={`w-full px-2 lg:px-5 xl:px-0 fixed left-0 z-50 transition-all ease-in-out duration-300  xl:py-6 lg:py-5 md:py-4 sm:py-3 py-2 ${ isScrolled
-          ? "bg-[radial-gradient(circle_at_top_left,_#dfe7ff_0%,_#fffbe7_40%,_#f2e5ff_100%)] top-0  "
-          : "bg-transparent top-6    "  }`} >
+      className={`w-full px-2 lg:px-5 xl:px-0 fixed left-0 z-50 transition-all ease-in-out duration-300    ${ isScrolled
+          ? "bg-[radial-gradient(circle_at_top_left,_#dfe7ff_0%,_#fffbe7_40%,_#f2e5ff_100%)] top-0 shadow-sm lg:py-5 md:py-3 py-2   "
+          : "bg-transparent top-6 lg:py-9 md:py-5 sm:py-3 py-2    "  }`} >
       <Container>
         <div className="flex items-center justify-between">
 

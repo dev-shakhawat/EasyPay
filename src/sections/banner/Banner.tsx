@@ -24,8 +24,8 @@ export default function Banner() {
         <div className="lg:flex  relative  ">
 
             {/* banner text */}
-            <motion.div  initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="xl:max-w-[638px] xl:pb-[159px] pb-5 sm:pb-10 md:pb-20 lg:pb-30 ">
-              <div className="px-1 md:px-2 xl:px-0">
+            <motion.div  initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="lg:max-w-[638px] lg:pb-[159px] pb-5 sm:pb-10 md:pb-25 ">
+              <div className="px-1 md:px-2 lg:px-0">
 
                   <span className="bannerTitle   ">
                     easy payment 
@@ -34,7 +34,7 @@ export default function Banner() {
                   <div className="relative ">
                     
                     <p className="bnnerhead  ">Pay fast and smarter from anywhere</p>
-                    <Image src={bannervictor} width={100} height={100} alt="logo" className=" absolute xl:top-17 top-11 lg:top-13 xl:right-5 right-45 lg:right-3 xl:w-[490px] md:w-[300px] lg:w-[390px]   hidden md:inline-block   " />
+                    <Image src={bannervictor} width={100} height={100} alt="logo" className=" absolute xl:top-17 top-11 lg:top-13 lg:right-3  right-70   xl:w-[490px] lg:w-[390px] md:w-[300px]    hidden md:inline-block   " />
 
                   </div>
 
