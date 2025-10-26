@@ -50,7 +50,7 @@ export default function Pricing() {
             <div className="grid grid-cols-3 gap-6 mt-12 relative   ">
 
                 {/* shap */}
-                <Image src={pricingShap} width={100} height={100} alt="logo" className=" absolute -bottom-20 left-1/2 -translate-x-1/2 w-full -z-1  " />
+                <Image src={pricingShap} width={100} height={100} alt="logo" className=" absolute -bottom-[200px] left-1/2 -translate-x-1/2 w-full -z-1  " />
 
                 {allPlan.map((plan , index) => <PricingCard key={index} name={plan.name} title={plan.title} price={plan.price} benifits={plan.benifits} btnText={plan.btnText}  />)}
 
