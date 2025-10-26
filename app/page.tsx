@@ -37,10 +37,10 @@ export default function Home() {
       <Testimonial/>
 
       {/* CallToAction section */}
-      {/* <CallToAction/> */}
+      <CallToAction/>
 
       {/* footer */}
-      {/* <Footer/> */}
+      <Footer/>
       
     </>
   );

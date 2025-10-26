@@ -31,24 +31,24 @@ export default function Footer() {
   const isInView = useInView(footRef, { margin: "-100px" });
 
   return (
-    <footer ref={footRef} className='relative'>
+    <footer ref={footRef} className='relative px-5 xl:px-0  '>
       
       <Container>
 
         {/* main footer box */}
-        <div className="grid grid-cols-1 md:grid-cols-2   ">
+        <div className="md:grid grid-cols-1 md:grid-cols-2    ">
 
           <motion.div  initial={{ opacity: 0, x: -20 }} animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }} transition={{ duration: 0.5 }}>
             <Image src={logo} width={100} height={100} alt="logo" className=" w-[153px]   " />
             <p className="mt-4 font-outfit font-normal text-base text-[#4D525F] leading-[150%]  max-w-[278px]     ">Easy Pay offers secure, seamless, and fee-free payments for effortless global transactions.</p>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }} transition={{ duration: 0.5 }} className=" flex justify-end gap-25  ">
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }} transition={{ duration: 0.5 }} className=" flex md:justify-end gap-25 mt-10 lg:mt-0  ">
             {links.map((link , index) => (
               <div key={link.title}>
                 <h3 className=" font-urbanist font-bold text-xl text-[#01081B] leading-[120%]   ">{link.title}</h3>
 
-                <ul className='mt-4 flex flex-col gap-3  '>
+                <ul className='mt-4 flex flex-col lg:gap-3 gap-1.5  '>
                   {link.links.map((link , index) => (
                     <li key={index}>
                       <Link href={link.url} className=" font-outfit font-normal text-base text-[#4D525F] leading-[150%]   ">{link.name}</Link>
