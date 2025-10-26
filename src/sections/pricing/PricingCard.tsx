@@ -15,7 +15,7 @@ type pricingcardprops = {
 import { MdDone } from "react-icons/md";
 
 
-export default function PricingCard({name , title , price , benifits , btnText ,   }:pricingcardprops) {
+export default function PricingCard({name , title , price , benifits , btnText   }:pricingcardprops) {
  
   return (
     <div   className='group relative border border-[#e7e7e8] rounded-[16px] py-10 px-6 bg-white hover:bg-black transition-all ease-in-out duration-300   '>
