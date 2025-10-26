@@ -22,7 +22,7 @@ export default function Home() {
       <Features />
 
       {/* brands */}
-      {/* <Brands /> */}
+      <Brands />
 
       {/* how it work */}
       {/* <Howto /> */}
