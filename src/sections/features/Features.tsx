@@ -49,7 +49,7 @@ export default function Features() {
  
 
   return (
-    <section id="features" ref={featureRef} className='xl:mt-[120px] lg:mt-25 md:mt-20 mt-15   '>
+    <section id="features" ref={featureRef} className='xl:mt-[120px] lg:mt-25 md:mt-20 mt-15 overflow-hidden   '>
         
         <Container>
              

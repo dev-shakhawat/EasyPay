@@ -46,21 +46,21 @@ export default function Pricing() {
 
 
   return (
-    <section id="pricing" ref={pricingRef} className='mt-30 pb-[105px] '>
+    <section  id="pricing" ref={pricingRef} className='xl:mt-30 lg:mt-25 md:mt-20 mt-15 pb-[105px] px-5 xl:px-0 overflow-hidden  '>
         
-        {/* header */}
-        <motion.div initial={{ opacity: 0, y: 50 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} transition={{ duration: 1 ,  delay: 0.2 }}  >
-          <SectionHead title="Pricing" subtitle="Simple transparent pricing no hidden fees" customeStyle="text-center " subtitleStyle="max-w-[490px] mx-auto" />
-        </motion.div>
         
 
         <Container>
+        {/* header */}
+        <motion.div initial={{ opacity: 0, y: 50 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} transition={{ duration: 1 ,  delay: 0.2 }}    >
+          <SectionHead title="Pricing" subtitle="Simple transparent pricing no hidden fees" customeStyle="text-center " subtitleStyle="xl:max-w-[490px] md:max-w-[400px] lg:max-w-[450px]  max-w-[300px] mx-auto"  />
+        </motion.div>
 
             {/* plans */}
-            <motion.div initial={{ opacity: 0, y: 50 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} transition={{ duration: 1 ,  delay: 0.4 }}  className="grid grid-cols-3 gap-6 mt-12 relative   ">
+            <motion.div initial={{ opacity: 0, y: 50 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} transition={{ duration: 1 ,  delay: 0.4 }}  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:gap-6  gap-3 mt-12 relative    "  >
 
                 {/* shap */}
-                <Image src={pricingShap} width={100} height={100} alt="logo" className=" absolute -bottom-[200px] left-1/2 -translate-x-1/2 w-full -z-1  " />
+                <Image src={pricingShap} width={100} height={100} alt="logo" className=" absolute -bottom-[200px] left-1/2 -translate-x-1/2 w-full -z-1 lg:inline-block hidden  " />
 
                 {allPlan.map((plan , index) => <PricingCard key={index} name={plan.name} title={plan.title} price={plan.price} benifits={plan.benifits} btnText={plan.btnText}   />)}
 

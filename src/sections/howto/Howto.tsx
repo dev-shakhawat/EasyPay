@@ -45,7 +45,7 @@ export default function Howto() {
     
 
   return (
-    <section ref={howtoref} className=" px-2 xl:px-0 xl:mt-30 lg:mt-20 mt-15 bg-[#f6f6f6] xl:py-30 lg:py-25 md:py-20 py-15   ">
+    <section ref={howtoref} className="overflow-hidden px-2 xl:px-0 xl:mt-30 lg:mt-20 mt-15 bg-[#f6f6f6] xl:py-30 lg:py-25 md:py-20 py-15   ">
       <Container>
         {/* header */}
         <div className=" flex flex-col lg:flex-row  justify-between lg:items-end   ">
