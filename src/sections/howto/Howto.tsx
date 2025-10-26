@@ -22,7 +22,7 @@ export default function Howto() {
     const steps = [
         {
             id: '01',
-            icon: <DownloadIcon/> ,
+            icon: <DownloadIcon  /> ,
             title: "Download Easy Pay",
             subtitle: "Get the Easy Pay app today from the App Store or Google Play hassle free."
         },
@@ -45,23 +45,23 @@ export default function Howto() {
     
 
   return (
-    <section ref={howtoref} className=" mt-30 bg-[#f6f6f6] py-30  ">
+    <section ref={howtoref} className=" px-2 xl:px-0 xl:mt-30 lg:mt-20 mt-15 bg-[#f6f6f6] xl:py-30 lg:py-25 md:py-20 py-15   ">
       <Container>
         {/* header */}
-        <div className="flex  justify-between items-end   ">
+        <div className=" flex flex-col lg:flex-row  justify-between lg:items-end   ">
 
           {/* section head */}
           <motion.div initial={{ opacity: 0, x: -50 }} animate={isInView ? { opacity: 1, x: 0 } :{ opacity: 0, x: -50 } } transition={{ duration: 1 }}  className=""> 
-            <SectionHead title="how it works" subtitle="Make payments, transfers, and more in 3 simple steps" customeStyle=" " subtitleStyle="max-w-[561px]" />
+            <SectionHead title="how it works" subtitle="Make payments, transfers, and more in 3 simple steps" customeStyle="text-center lg:text-left " subtitleStyle="xl:max-w-[561px] lg:max-w-[500px] md:max-w-[400px] max-w-[300px] mx-auto lg:mx-0   " />
           </motion.div>
 
           {/* button */}
-          <motion.button initial={{ opacity: 0, x: 50 }} animate={isInView ? { opacity: 1, x: 0 } :{ opacity: 0, x: 50 } } transition={{ duration: 1 }} className="py-4 px-6 h-fit leading-[150%] rounded-[25px] bg-[#2E68FD] text-white font-semibold text-base font-outfit "> Get Started Now </motion.button>
+          <motion.button initial={{ opacity: 0, x: 50 }} animate={isInView ? { opacity: 1, x: 0 } :{ opacity: 0, x: 50 } } transition={{ duration: 1 }} className="getStartbtn "> Get Started Now </motion.button>
  
         </div>
 
         {/* how to cards */}
-        <motion.div initial={{ opacity: 0, y: 50 }} animate={isInView ? { opacity: 1, y: 0 } :{ opacity: 0, y: 50 } } transition={{ duration: 1 , delay: 0.3 }} className="flex justify-between p-6 bg-[#FFFFFF] mt-12 rounded-[16px]   ">
+        <motion.div initial={{ opacity: 0, y: 50 }} animate={isInView ? { opacity: 1, y: 0 } :{ opacity: 0, y: 50 } } transition={{ duration: 1 , delay: 0.3 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-6 bg-[#FFFFFF] mt-12 rounded-[16px]   ">
             {steps.map((step , index) => (
                 <HowToStep key={index} id={step.id} icon={step.icon} title={step.title} subtitle={step.subtitle} lineShape={steps.length - 1 !== index} />
             ))}

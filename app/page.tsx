@@ -25,7 +25,7 @@ export default function Home() {
       <Brands />
 
       {/* how it work */}
-      {/* <Howto /> */}
+      <Howto />
 
       {/* security */}
       {/* <Security/> */}

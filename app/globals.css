@@ -60,3 +60,11 @@
 .bannerText{
   @apply mt-3 font-outfit text-lg text-[#4D525F] leading-[150%] max-w-[490px]   mx-auto lg:mx-0  text-center lg:text-left  
 }
+
+
+
+/* how to section */
+ 
+.getStartbtn{
+  @apply xl:py-4 lg:py-3 md:py-2 sm:py-2 py-1 xl:px-6 lg:px-5 md:px-4  px-3  h-fit leading-[150%] rounded-[30px] bg-[#2E68FD] text-white font-semibold xl:text-base lg:text-sm md:text-xs  text-xs  font-outfit mt-5 lg:mt-0 mx-auto lg:mx-0  
+}
