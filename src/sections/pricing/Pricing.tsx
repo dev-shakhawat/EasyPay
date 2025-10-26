@@ -46,7 +46,7 @@ export default function Pricing() {
 
 
   return (
-    <section ref={pricingRef} className='mt-30 pb-[105px] '>
+    <section id="pricing" ref={pricingRef} className='mt-30 pb-[105px] '>
         
         {/* header */}
         <motion.div initial={{ opacity: 0, y: 50 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} transition={{ duration: 1 ,  delay: 0.2 }}  >

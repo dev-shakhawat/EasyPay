@@ -49,7 +49,7 @@ export default function Features() {
  
 
   return (
-    <section ref={featureRef} className='mt-[120px]'>
+    <section id="features" ref={featureRef} className='mt-[120px]'>
         
         <Container>
              

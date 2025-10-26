@@ -53,7 +53,7 @@ export default function Security() {
         const securityRef = React.useRef<HTMLDivElement>(null);
         const isInView = useInView(securityRef, { margin: "-100px" });
   return (
-    <section ref={securityRef} className='mt-30'>
+    <section id="security" ref={securityRef} className='mt-30'>
         
         <Container> 
 

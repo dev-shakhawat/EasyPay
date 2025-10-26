@@ -13,7 +13,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
 
 export default function NavBar() {
-  const navItems = ["Features", "Pricing", "Security", "Benefits"];
+  const navItems = [{name: "Features" , url: "/#features"}, {name: "Pricing" , url: "/#pricing"}, {name: "Security" , url: "/#security"}, {name: "Benefits" , url: "/#benefits"} ];
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -50,8 +50,8 @@ export default function NavBar() {
             {navItems.map((item, index) => ( 
 
               <li key={index}>
-                <Link  href={`#${item.toLowerCase()}`}
-                  className="font-urbanist font-semibold text-lg text-[#4D525F] hover:text-[#2E68FD] transition-colors duration-200" > {item} </Link>
+                <Link  href={`${item.url}`}
+                  className="font-urbanist font-semibold text-lg text-[#4D525F] hover:text-[#2E68FD] transition-colors duration-200" > {item.name} </Link>
               </li>
             ))}
           </ul>
@@ -78,7 +78,7 @@ export default function NavBar() {
             <ul className="flex flex-col gap-4">
               {navItems.map((item, index) => (
                 <li key={index}>
-                  <Link href={`#${item.toLowerCase()}`}  className="font-urbanist font-semibold text-base text-[#4D525F] hover:text-[#2E68FD] transition-colors duration-200" onClick={() => setIsMenuOpen(false)} > {item} </Link>
+                  <Link href={`${item.url}`}  className="font-urbanist font-semibold text-base text-[#4D525F] hover:text-[#2E68FD] transition-colors duration-200" onClick={() => setIsMenuOpen(false)} > {item.name} </Link>
                 </li>
               ))}
             </ul>
