@@ -22,16 +22,16 @@ export default function Home() {
       <Features />
 
       {/* brands */}
-      <Brands />
+      {/* <Brands /> */}
 
       {/* how it work */}
       {/* <Howto /> */}
 
       {/* security */}
-      <Security/>
+      {/* <Security/> */}
 
       {/* Pricing section */}
-      <Pricing/>
+      {/* <Pricing/> */}
 
       {/* testimonial section */}
       {/* <Testimonial/> */}
