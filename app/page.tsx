@@ -7,6 +7,7 @@ import Security from "@/src/sections/security/Security";
 import Pricing from "@/src/sections/pricing/Pricing";
 import Testimonial from "@/src/sections/testimonial/Testimonial";
 import CallToAction from "@/src/sections/callToAction/CallToAction";
+import Footer from "@/src/sections/footer/Footer";
 
 export default function Home() {
   return (
@@ -37,6 +38,9 @@ export default function Home() {
 
       {/* CallToAction section */}
       <CallToAction/>
+
+      {/* footer */}
+      <Footer/>
       
     </>
   );

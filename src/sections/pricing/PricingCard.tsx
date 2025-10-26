@@ -1,3 +1,4 @@
+ 
 import Link from 'next/link'
 import React from 'react'
 
@@ -6,16 +7,18 @@ type pricingcardprops = {
     title : string
     price : number
     benifits : string[]
-    btnText : string
-}
+    btnText : string  
+  }
 
 
 // icon
 import { MdDone } from "react-icons/md";
 
-export default function PricingCard({name , title , price , benifits , btnText}:pricingcardprops) {
+
+export default function PricingCard({name , title , price , benifits , btnText ,   }:pricingcardprops) {
+ 
   return (
-    <div className='group relative border border-[#e7e7e8] rounded-[16px] py-10 px-6 bg-white hover:bg-black transition-all ease-in-out duration-300   '>
+    <div   className='group relative border border-[#e7e7e8] rounded-[16px] py-10 px-6 bg-white hover:bg-black transition-all ease-in-out duration-300   '>
 
         {/* name */}
         <h3 className=" font-urbanist font-bold text-2xl text-[#01081B] group-hover:text-[#FFFFFF] leading-[120%] transition-all ease-in-out duration-300   ">{name}</h3>

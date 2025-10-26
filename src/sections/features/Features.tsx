@@ -1,3 +1,5 @@
+"use client";
+import { motion , useInView } from "framer-motion";
 import React from 'react'
 
 // components
@@ -42,18 +44,25 @@ export default function Features() {
       },
     ]
 
+    const featureRef = React.useRef<HTMLDivElement>(null);
+    const isInView = useInView(featureRef, { margin: "-100px" });
+ 
+
   return (
-    <section className='mt-[120px]'>
+    <section ref={featureRef} className='mt-[120px]'>
         
         <Container>
+             
+            {/* section head */}
+            <motion.div initial={{ opacity: 0, y: 50 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} transition={{ duration: 1 }}  >
+              <SectionHead title="Features" subtitle="Why choose Easy Pay for effortless payments?" customeStyle="text-center" subtitleStyle="text-center max-w-[450px] mx-auto " />
+            </motion.div> 
 
-            <SectionHead title="Features" subtitle="Why choose Easy Pay for effortless payments?" customeStyle="text-center" subtitleStyle="text-center max-w-[450px] mx-auto " />
+            <motion.div initial={{ opacity: 0, y: -50 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: -50 }} transition={{ duration: 1 }} className="grid grid-cols-4 gap-6 mt-12  ">
 
-            <div className="grid grid-cols-4 gap-6 mt-12  ">
+              {allFeatures.map((feature , index) =>  <FeatureCard key={index}  icon={feature.icon} title={feature.title} subtitle={feature.subtitle} bgcolor={feature.bgcolor}   /> )}
 
-              {allFeatures.map((feature , index) =>  <FeatureCard icon={feature.icon} title={feature.title} subtitle={feature.subtitle} bgcolor={feature.bgcolor} key={index}   /> )}
-
-            </div>
+            </motion.div>
              
         </Container>
     </section>

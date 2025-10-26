@@ -1,4 +1,5 @@
 "use client";
+import { motion , useInView } from "framer-motion";
 import React, { useRef } from "react";
 import dynamic from "next/dynamic";
 
@@ -127,27 +128,30 @@ export default function Testimonial() {
     carouselRef.current?.previous();
   };
 
+  const testimonialRef = React.useRef<HTMLDivElement>(null);
+  const isInView = useInView(testimonialRef, { margin: "-100px" });
+
   return (
-    <section className="bg-[#F6F6F6] py-30 overflow-hidden  ">
+    <section ref={testimonialRef} className="bg-[#F6F6F6] py-30 overflow-hidden  ">
       <Container>
         {/* header */}
         <div className="flex">
           <div className="">
-            <SectionHead
-              title="Testimonial"
-              subtitle="We’ve build trust with reviews from real users"
-              customeStyle="  "
-              subtitleStyle="max-w-[490px]  "
-            />
+
+            <motion.div initial={{ opacity: 0 , x:-50 }} animate={{ opacity: isInView ? 1 : 0 , x: isInView ? 0 : -50 }} transition={{ duration: 1 , delay: 0.2 }}  > 
+              <SectionHead title="Testimonial" subtitle="We’ve build trust with reviews from real users" customeStyle="  " subtitleStyle="max-w-[490px]  " />
 
             <p className=" font-outfit font-normal text-base leading-[150%] text-[#4D525F] mt-3 max-w-[461px]   ">
               Boost your credibility by featuring genuine testimonials from real
               users, showcasing their positive experiences and satisfaction with
               Monks Pay services.
             </p>
+            </motion.div>
 
             {/* slider button */}
-            <ButtonGroup next={handleNext} previous={handlePrev} />
+            <motion.div initial={{ opacity: 0 , x:50 }} animate={{ opacity: isInView ? 1 : 0 , x: isInView ? 0 : 50 }} transition={{ duration: 1 , delay: 0.4 }}   > 
+              <ButtonGroup next={handleNext} previous={handlePrev} />
+            </motion.div>
           </div>
 
           {/* slider */}

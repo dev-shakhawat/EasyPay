@@ -1,4 +1,5 @@
-"use client";
+"use client"; 
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import Container from "./Container";
 import Image from "next/image";
@@ -21,7 +22,8 @@ export default function NavBar() {
   }, []);
 
   return (
-    <nav
+    <motion.nav 
+      initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
       className={` w-full fixed  left-0 z-10 transition-all ease-in-out duration-300    ${
         isScrolled
           ? "bg-[radial-gradient(circle_at_top_left,_#dfe7ff_0%,_#fffbe7_40%,_#f2e5ff_100%)] top-0 py-[20px]"
@@ -49,6 +51,6 @@ export default function NavBar() {
 
         </div>
       </Container>
-    </nav>
+    </motion.nav>
   );
 }

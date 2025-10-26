@@ -9,7 +9,7 @@ interface featurecardprops {
 
 export default function FeatureCard({icon ,  title , subtitle , bgcolor }:featurecardprops) {
   return (
-    <div className={`${bgcolor} rounded-[16px] px-5.5 py-8  flex flex-col items-center       `}  >
+    <div className={`${bgcolor} rounded-[16px] px-5.5 py-8  flex flex-col items-center      `}  >
       
       {/* icon */}
       {icon}

@@ -1,3 +1,5 @@
+"use client";
+import { motion , useInView } from "framer-motion";
 import React from 'react'
 
 // components
@@ -48,31 +50,39 @@ export default function Security() {
             color: "#932EFA"
         },
     ]
+        const securityRef = React.useRef<HTMLDivElement>(null);
+        const isInView = useInView(securityRef, { margin: "-100px" });
   return (
-    <div className='mt-30'>
+    <section ref={securityRef} className='mt-30'>
         
         <Container> 
 
             <div className="flex justify-between items-end  ">
-                <SectionHead title="security" subtitle="We protect your money at every step with Easy Pay" customeStyle=" " subtitleStyle="max-w-[561px]" />
 
-                <p className="max-w-[377px] font-outfit font-normal text-base text-[#4D525F] leading-[150%]      ">
-                    Easy Pay ensures your money is protected at every step with advanced encryption, real-time monitoring, and multi-factor authentication.
-                </p>
+                <motion.div initial={{ opacity: 0, x: 50 }} animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }} transition={{ duration: 1 }} > 
+                  <SectionHead title="security" subtitle="We protect your money at every step with Easy Pay" customeStyle=" " subtitleStyle="max-w-[561px]" />
+                </motion.div>
+                
+                <motion.div initial={{ opacity: 0, x: -50 }} animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }} transition={{ duration: 1 }}  >
+                    <p className="max-w-[377px] font-outfit font-normal text-base text-[#4D525F] leading-[150%]      ">
+                        Easy Pay ensures your money is protected at every step with advanced encryption, real-time monitoring, and multi-factor authentication.
+                    </p> 
+                </motion.div>
             </div>
 
             {/* cards */}
-            <div 
+            <motion.div 
+              initial={{ opacity: 0, y: -50 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }} transition={{ duration: 1 , delay: 0.5 }}
               style={{backgroundImage: `url(${securitybg.src})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }} 
-              className="grid lg:grid-cols-3 md:grid-cols-2 gap-y-10 py-10 px-6   rounded-[16px] mt-12  ">
+              className="grid lg:grid-cols-3 md:grid-cols-2 gap-y-10 py-10 px-6 rounded-[16px] mt-12  ">
 
               {allSecurity.map((card) => (  
                 <SecurityCard key={card.id} id={card.id} title={card.title} subtitle={card.subtitle} color={card.color} />
               ))}
 
-            </div>
+            </motion.div>
 
         </Container>
-    </div>
+    </section>
   )
 }

@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import React from "react";
 
 // next components
@@ -5,7 +7,7 @@ import Image from "next/image";
 
 // images
 import bannerbg from "../../assets/images/bannerbg.png";
-import bannervictor from "../../assets/images/bannervictor.png";
+import bannervictor from "../../assets/images/bannervictor.svg";
 import playstore from "../../assets/images/playstore.png";
 import appstore from "../../assets/images/appstore.png";
 import graphic from "../../assets/images/graphic.svg";
@@ -22,7 +24,7 @@ export default function Banner() {
         <div className="flex relative  ">
 
             {/* banner text */}
-            <div className="max-w-[638px] pb-[159px] ">
+            <motion.div  initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="max-w-[638px] pb-[159px] ">
               <div className="">
 
                   <span className="mt-[201px] inline-block font-outfit font-semibold text-base text-[#787878] leading-[150%] uppercase    ">easy payment</span>
@@ -44,10 +46,10 @@ export default function Banner() {
 
               </div>
 
-            </div>
+            </motion.div>
             
             {/* banner image */}
-            <Image src={graphic} width={100} height={100} alt="bannergraphic" className=" w-[643px]   absolute bottom-0 -right-[56px] object-cover   " />
+            <Image priority src={graphic} width={100} height={100} alt="bannergraphic" className=" w-[643px]   absolute bottom-0 -right-[56px] object-cover   " />
  
 
 

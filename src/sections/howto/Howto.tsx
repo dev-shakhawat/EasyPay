@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import { motion , useInView } from "framer-motion";
+import React , { useRef } from "react";
 import Image from "next/image";
  
 
@@ -37,28 +39,39 @@ export default function Howto() {
             subtitle: "Easily split bills, send money to friends, and make smooth online payments instantly.",
         },
     ]
+
+    const howtoref = useRef<HTMLDivElement>(null);
+    const isInView = useInView(howtoref, {  margin: "-100px" });
+    
+
   return (
-    <section className=" mt-30 bg-[#f6f6f6] py-30  ">
+    <section ref={howtoref} className=" mt-30 bg-[#f6f6f6] py-30  ">
       <Container>
         {/* header */}
         <div className="flex  justify-between items-end   ">
-          <SectionHead title="how it works" subtitle="Make payments, transfers, and more in 3 simple steps" customeStyle=" " subtitleStyle="max-w-[561px]" />
+
+          {/* section head */}
+          <motion.div initial={{ opacity: 0, x: -50 }} animate={isInView ? { opacity: 1, x: 0 } :{ opacity: 0, x: -50 } } transition={{ duration: 1 }}  className=""> 
+            <SectionHead title="how it works" subtitle="Make payments, transfers, and more in 3 simple steps" customeStyle=" " subtitleStyle="max-w-[561px]" />
+          </motion.div>
 
           {/* button */}
-        <button className="py-4 px-6 h-fit leading-[150%] rounded-[25px] bg-[#2E68FD] text-white font-semibold text-base font-outfit "> Get Started Now </button>
+          <motion.button initial={{ opacity: 0, x: 50 }} animate={isInView ? { opacity: 1, x: 0 } :{ opacity: 0, x: 50 } } transition={{ duration: 1 }} className="py-4 px-6 h-fit leading-[150%] rounded-[25px] bg-[#2E68FD] text-white font-semibold text-base font-outfit "> Get Started Now </motion.button>
  
         </div>
 
         {/* how to cards */}
-        <div className="flex justify-between p-6 bg-[#FFFFFF] mt-12 rounded-[16px]   ">
+        <motion.div initial={{ opacity: 0, y: 50 }} animate={isInView ? { opacity: 1, y: 0 } :{ opacity: 0, y: 50 } } transition={{ duration: 1 , delay: 0.3 }} className="flex justify-between p-6 bg-[#FFFFFF] mt-12 rounded-[16px]   ">
             {steps.map((step , index) => (
                 <HowToStep key={index} id={step.id} icon={step.icon} title={step.title} subtitle={step.subtitle} lineShape={steps.length - 1 !== index} />
             ))}
-        </div>
+        </motion.div>
 
 
         {/* steper image */}
-        <Image src={steper} width={100} height={100} alt="logo" className=" mt-6 w-full rounded-[12px]   " />
+        <motion.div initial={{ opacity: 0, y: -50 }} animate={isInView ? { opacity: 1, y: 0 } :{ opacity: 0, y: -50 } } transition={{ duration: 1 , delay: 1 }} > 
+          <Image priority src={steper} width={100} height={100} alt="logo" className=" mt-6 w-full rounded-[12px]   " />
+        </motion.div>
 
       </Container>
     </section>
