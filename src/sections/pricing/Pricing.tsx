@@ -46,7 +46,7 @@ export default function Pricing() {
 
 
   return (
-    <section  id="pricing" ref={pricingRef} className='xl:mt-30 lg:mt-25 md:mt-20 mt-15 pb-[105px] px-5 xl:px-0 overflow-hidden  '>
+    <section  id="pricing" ref={pricingRef} className='xl:mt-30 lg:mt-25 md:mt-20 mt-15 lg:pb-[105px] md:pb-[90px]   sm:pb-18 pb-14 px-5 xl:px-0 overflow-hidden  '>
         
         
 

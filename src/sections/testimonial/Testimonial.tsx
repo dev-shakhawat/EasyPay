@@ -24,7 +24,7 @@ const TestimonialCard = dynamic(() => import("./TestimonialCard"), { ssr: false 
 
 const ButtonGroup = ({ next, previous }: any) => {
   return (
-    <div className="flex items-center gap-2 mt-10  ">
+    <div className="flex items-center gap-2 mt-10 justify-center lg:justify-start  ">
       {/* prev button */}
       <button
         onClick={() => previous()}
@@ -132,16 +132,16 @@ export default function Testimonial() {
   const isInView = useInView(testimonialRef, { margin: "-100px" });
 
   return (
-    <section ref={testimonialRef} className="bg-[#F6F6F6] py-30 overflow-hidden  ">
+    <section ref={testimonialRef} className="bg-[#F6F6F6] lg:py-30 md:py-25 sm:py-20 py-15 px-5 xl:px-0 overflow-hidden  ">
       <Container>
         {/* header */}
-        <div className="flex">
+        <div className="lg:flex">
           <div className="">
 
             <motion.div initial={{ opacity: 0 , x:-50 }} animate={{ opacity: isInView ? 1 : 0 , x: isInView ? 0 : -50 }} transition={{ duration: 1 , delay: 0.2 }}  > 
-              <SectionHead title="Testimonial" subtitle="We’ve build trust with reviews from real users" customeStyle="  " subtitleStyle="max-w-[490px]  " />
+              <SectionHead title="Testimonial" subtitle="We’ve build trust with reviews from real users" customeStyle="flex flex-col items-center lg:items-start   " subtitleStyle="lg:max-w-[490px] max-w-[300px] text-center lg:text-left  " />
 
-            <p className="  cnmPeragraph mt-3 max-w-[461px]   ">
+            <p className="  cnmPeragraph mt-3 lg:max-w-[461px] max-w-[400px] mx-auto lg:mx-0 text-center lg:text-left   ">
               Boost your credibility by featuring genuine testimonials from real
               users, showcasing their positive experiences and satisfaction with
               Monks Pay services.
@@ -155,12 +155,12 @@ export default function Testimonial() {
           </div>
 
           {/* slider */}
-          <div className="relative ml-[160px]  ">
+          <div className="relative lg:ml-[160px]  ">
 
-            <div className="absolute top-0 left-0 w-[100vw] h-full     ">
+            <div className="lg:absolute top-0 left-0 lg:w-[100vw] h-full mt-2 lg:mt-0     ">
 
             {/* shap */}
-            <Image src={pricingShap} width={100} height={100} alt={pricingShap.src} className="  w-[500px] h-[500px] absolute -top-[100px] left-70     " />
+            <Image src={pricingShap} width={100} height={100} alt={pricingShap.src} className="  w-[500px] h-[500px] absolute -top-[100px] left-70 hidden lg:inline-block     " />
 
               <Carousel
                 ref={carouselRef}

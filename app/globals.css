@@ -29,10 +29,9 @@
 /* common css */
 .cnmPeragraph {
   @apply font-outfit font-normal text-sm leading-[145%] text-[#5A5F6D]
-  sm:text-base sm:leading-[150%]
-  md:text-[17px] md:leading-[155%]
-  lg:text-[18px] lg:leading-[160%]
-  xl:text-base xl:leading-[150%] xl:text-[#4D525F];
+  sm:text-[12px] sm:leading-[150%]
+  md:text-[15px] md:leading-[155%] 
+  lg:text-base lg:leading-[150%] lg:text-[#4D525F];
 }
 
 

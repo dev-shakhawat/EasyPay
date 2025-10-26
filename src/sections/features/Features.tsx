@@ -32,8 +32,8 @@ export default function Features() {
       },
       {
         icon : <WalletIcon/> , 
-        title: "No hidden fees" , 
-        subtitle: "Clear and simple pricing. Always be aware of your costs." ,
+        title: "Digital wallet" , 
+        subtitle: "Store money securely and make fast transfers or purchases." ,
         bgcolor: "bg-[#eef9fe] "
       },
       {
@@ -58,7 +58,7 @@ export default function Features() {
               <SectionHead title="Features" subtitle="Why choose Easy Pay for effortless payments?" customeStyle="text-center" subtitleStyle="text-center  lg:max-w-[450px] max-w-[70%] md:max-w-[60%]  mx-auto " />
             </motion.div> 
 
-            <motion.div initial={{ opacity: 0, y: -50 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: -50 }} transition={{ duration: 1 }} className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-6 lg:gap-5 md:gap-4 gap-3 xl:mt-12 lg:mt-10 md:mt-8 mt-6  ">
+            <motion.div initial={{ opacity: 0, y: -50 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: -50 }} transition={{ duration: 1 }} className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  lg:gap-6 md:gap-4 gap-3 xl:mt-12 lg:mt-10 md:mt-8 mt-6  ">
 
               {allFeatures.map((feature , index) =>  <FeatureCard key={index}  icon={feature.icon} title={feature.title} subtitle={feature.subtitle} bgcolor={feature.bgcolor}   /> )}
 

@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       {/* navbar */}
-      {/* <NavBar /> */}
+      <NavBar />
 
       {/* banner */}
       <Banner />
@@ -34,7 +34,7 @@ export default function Home() {
       <Pricing/>
 
       {/* testimonial section */}
-      {/* <Testimonial/> */}
+      <Testimonial/>
 
       {/* CallToAction section */}
       {/* <CallToAction/> */}
