@@ -28,7 +28,7 @@ export default function Home() {
       <Howto />
 
       {/* security */}
-      {/* <Security/> */}
+      <Security/>
 
       {/* Pricing section */}
       {/* <Pricing/> */}

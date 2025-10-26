@@ -53,18 +53,18 @@ export default function Security() {
         const securityRef = React.useRef<HTMLDivElement>(null);
         const isInView = useInView(securityRef, { margin: "-100px" });
   return (
-    <section id="security" ref={securityRef} className='mt-30'>
+    <section id="security" ref={securityRef} className='xl:mt-30 lg:mt-25 md:mt-20 mt-15    '>
         
         <Container> 
 
-            <div className="flex justify-between items-end  ">
+            <div className="lg:flex justify-between items-end  ">
 
                 <motion.div initial={{ opacity: 0, x: 50 }} animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }} transition={{ duration: 1 }} > 
-                  <SectionHead title="security" subtitle="We protect your money at every step with Easy Pay" customeStyle=" " subtitleStyle="max-w-[561px]" />
+                  <SectionHead title="security" subtitle="We protect your money at every step with Easy Pay" customeStyle="flex flex-col items-center lg:items-start " subtitleStyle="xl:max-w-[561px] lg:max-w-[500px] md:max-w-[400px] sm:max-w-[350px] max-w-[300px] text-center lg:text-left  " />
                 </motion.div>
                 
                 <motion.div initial={{ opacity: 0, x: -50 }} animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }} transition={{ duration: 1 }}  >
-                    <p className="max-w-[377px] cnmPeragraph     ">
+                    <p className="xl:max-w-[377px] lg:max-w-[500px] md:max-w-[400px] sm:max-w-[350px] max-w-[300px] mx-auto lg:mx-0 text-center lg:text-left   cnmPeragraph     ">
                         Easy Pay ensures your money is protected at every step with advanced encryption, real-time monitoring, and multi-factor authentication.
                     </p> 
                 </motion.div>
