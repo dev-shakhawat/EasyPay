@@ -31,15 +31,15 @@ export default function NavBar() {
       }  `}
     >
       <Container>
-        <div className="flex items-center justify-between  ">
+        <div className="flex items-center justify-between  flex-wrap md:flex-nowrap gap-4 md:gap-0 px-4 sm:px-6 md:px-8 ">
           {/* logo */}
-          <Image src={logo} width={100} height={100} alt="logo" />
+          <Image src={logo} width={100} height={100} alt="logo" className="w-[80px] sm:w-[90px] md:w-[100px] h-auto" />
 
           {/* nav items */}
-          <ul className="flex gap-8 font-semibold text-lg text-[#4D525F] ">
+          <ul className="flex gap-4 sm:gap-6 md:gap-8 flex-wrap justify-center md:justify-start">
             {navItems.map((item, index) => (
               <li key={index}>
-                <Link href="#" className=" font-urbanist   ">
+                <Link href="#" className=" font-urbanist font-semibold text-sm sm:text-base md:text-lg text-[#4D525F]    ">
                   {item}
                 </Link>
               </li>
@@ -47,7 +47,7 @@ export default function NavBar() {
           </ul>
 
           {/* contact btn */}
-          <button className="py-3 px-6 h-fit leading-[150%] rounded-[25px] bg-[#2E68FD] text-white font-semibold text-lg font-outfit ">Contact Us</button>
+          <button className="py-2 sm:py-2.5 md:py-3 px-4 sm:px-5 md:px-6 h-fit leading-[150%] rounded-[20px] sm:rounded-[22px] md:rounded-[25px] bg-[#2E68FD] text-white font-semibold text-sm sm:text-base font-outfit ">Contact Us</button>
 
         </div>
       </Container>

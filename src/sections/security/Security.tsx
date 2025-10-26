@@ -64,7 +64,7 @@ export default function Security() {
                 </motion.div>
                 
                 <motion.div initial={{ opacity: 0, x: -50 }} animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }} transition={{ duration: 1 }}  >
-                    <p className="max-w-[377px] font-outfit font-normal text-base text-[#4D525F] leading-[150%]      ">
+                    <p className="max-w-[377px] cnmPeragraph     ">
                         Easy Pay ensures your money is protected at every step with advanced encryption, real-time monitoring, and multi-factor authentication.
                     </p> 
                 </motion.div>

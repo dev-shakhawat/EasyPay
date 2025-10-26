@@ -20,7 +20,7 @@ export default function TestimonialCard({stars , text , name , job , image}:test
       </div>
 
       {/* text */}
-      <p className=" font-outfit font-normal text-base text-[#4D525F] leading-[150%] mt-4 line-clamp-5 text-ellipsis    ">{text}</p>
+      <p className=" cnmPeragraph mt-4 line-clamp-5 text-ellipsis    ">{text}</p>
 
       {/* user */}
       <div className="flex items-center mt-8 gap-[9px] ">
@@ -31,7 +31,7 @@ export default function TestimonialCard({stars , text , name , job , image}:test
         {/* name & job */}
         <div className="">
           <h3 className=" font-urbanist font-semibold text-lg leading-[120%] text-[#01081B]    ">{name}</h3>
-          <p className= " font-outfit font-normal text-base leading-[150%] text-[#4D525F] line-clamp-1 text-ellipsis  ">{job}</p>
+          <p className= "cnmPeragraph line-clamp-1 text-ellipsis  ">{job}</p>
         </div>
 
       </div>

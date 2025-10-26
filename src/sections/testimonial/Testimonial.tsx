@@ -141,7 +141,7 @@ export default function Testimonial() {
             <motion.div initial={{ opacity: 0 , x:-50 }} animate={{ opacity: isInView ? 1 : 0 , x: isInView ? 0 : -50 }} transition={{ duration: 1 , delay: 0.2 }}  > 
               <SectionHead title="Testimonial" subtitle="We’ve build trust with reviews from real users" customeStyle="  " subtitleStyle="max-w-[490px]  " />
 
-            <p className=" font-outfit font-normal text-base leading-[150%] text-[#4D525F] mt-3 max-w-[461px]   ">
+            <p className="  cnmPeragraph mt-3 max-w-[461px]   ">
               Boost your credibility by featuring genuine testimonials from real
               users, showcasing their positive experiences and satisfaction with
               Monks Pay services.

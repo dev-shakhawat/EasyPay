@@ -18,7 +18,7 @@ export default function SecurityCard({id , title , subtitle , color}:securitycar
 
         <h3 className=" mt-[33px] font-urbanist font-bold text-xl text-[#01081B] leading-[120%] ">{title}</h3>
 
-        <p className="font-outfit font-normal text-base text-[#4D525F] leading-[150%] max-w-[300px]  ">{subtitle}</p>
+        <p className="cnmPeragraph max-w-[300px]  ">{subtitle}</p>
 
     </div>
   )

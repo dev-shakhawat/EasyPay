@@ -15,10 +15,10 @@ export default function FeatureCard({icon ,  title , subtitle , bgcolor }:featur
       {icon}
 
       {/* title */}
-      <h3 className=" font-urbanist font-bold text-xl mt-10 text-[#01081B] leading-[120%]   ">{title}</h3>
+      <h3 className=" cmnHeadingtwo mt-10  ">{title}</h3>
 
       {/* subtitle */}
-      <p className="cnmPeragraph  mt-2 text-center    ">{subtitle}</p>
+      <p className="cnmPeragraph  mt-2 text-center  ">{subtitle}</p>
 
     </div>
   )

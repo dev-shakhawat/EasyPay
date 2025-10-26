@@ -24,7 +24,7 @@ export default function HowToStep({id , icon , title , subtitle , lineShape}:how
             {title} 
         </h3>
 
-        <p className="mt-2 text-base text-[#4D525F] leading-[150%] font-normal max-w-[245px] ">
+        <p className="mt-2 cnmPeragraph max-w-[245px] ">
             {subtitle}
         </p>
 
