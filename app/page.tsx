@@ -8,6 +8,7 @@ import Pricing from "@/src/sections/pricing/Pricing";
 import Testimonial from "@/src/sections/testimonial/Testimonial";
 import CallToAction from "@/src/sections/callToAction/CallToAction";
 import Footer from "@/src/sections/footer/Footer";
+import KYC from "@/src/sections/kyc/KYC";
 
 export default function Home() {
   return (
@@ -29,6 +30,9 @@ export default function Home() {
 
       {/* security */}
       <Security/>
+
+      {/* kyc */}
+      <KYC/>
 
       {/* Pricing section */}
       <Pricing/>
