@@ -17,7 +17,7 @@ import Container from "@/src/components/common/Container";
 
 export default function Banner() {
   return (
-    <section style={{ backgroundImage: `url(${bannerbg.src})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", }} className=" banner " >
+    <section style={{ backgroundImage: `url(${bannerbg.src})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", }} className=" banner lg:px-5  " >
       
       <Container>
 

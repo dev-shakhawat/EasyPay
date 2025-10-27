@@ -74,7 +74,7 @@ const KYC  = () => {
     ]
 
   return (
-    <section ref={kycref} className=" lg:mt-30 md:mt-25 sm:mt-20 mt-15  relative bg-gradient-to-br from-white via-blue-50 to-indigo-100  py-20 flex items-center justify-center   overflow-hidden md:px-5 ">
+    <section ref={kycref} className="    relative bg-gradient-to-br from-white via-blue-50 to-indigo-100  py-30 flex items-center justify-center   overflow-hidden md:px-5 ">
        
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 overflow-hidden"> 
@@ -161,7 +161,7 @@ const KYC  = () => {
                         
                         <div className="grid grid-cols-2 gap-4 text-sm">
                             {kycProcess.map((process , index) => (
-                            <div className={`flex items-center gap-2  ${process.color} ont-outfit font-normal `}  >
+                            <div key={index} className={`flex items-center gap-2  ${process.color} ont-outfit font-normal `}  >
                                 <div className={`w-2 h-2  ${process.bg}  rounded-full animate-pulse  `}/>
                                 <span className="ont-outfit font-semibold text-sm ">{process.name}</span>
                             </div>

@@ -9,6 +9,8 @@ import Testimonial from "@/src/sections/testimonial/Testimonial";
 import CallToAction from "@/src/sections/callToAction/CallToAction";
 import Footer from "@/src/sections/footer/Footer";
 import KYC from "@/src/sections/kyc/KYC";
+import FAQ from "@/src/sections/faq/FAQ";
+import GlobalScale from "@/src/sections/globalScale/GlobalScale";
 
 export default function Home() {
   return (
@@ -31,6 +33,9 @@ export default function Home() {
       {/* security */}
       <Security/>
 
+      {/* faq */}
+      <FAQ/>
+
       {/* kyc */}
       <KYC/>
 
@@ -39,6 +44,11 @@ export default function Home() {
 
       {/* testimonial section */}
       <Testimonial/>
+
+
+      {/* scale section */}
+      <GlobalScale/>
+      
 
       {/* CallToAction section */}
       <CallToAction/>
