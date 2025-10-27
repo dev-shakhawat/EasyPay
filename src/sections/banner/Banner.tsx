@@ -42,7 +42,7 @@ export default function Banner() {
                     Experience the future of payments: fast, secure, and tailored for the next generation's convenience and trust.
                   </p>
 
-                  <div className="flex justify-center lg:justify-start gap-2 xl:mt-12 lg:mt-10 md:mt-8 mt-6   ">
+                  <div className="flex justify-center lg:justify-start gap-2 lg:mt-12 md:mt-10 sm:mt-8 mt-3   ">
                     <Image src={appstore} width={100} height={100} alt="logo" className=" max-w-[144px]   " />
                     <Image src={playstore} width={100} height={100} alt="logo" className=" max-w-[144px]   " />
                   </div> 
