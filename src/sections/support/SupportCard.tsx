@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 export default function SupportCard({title , text}: Props) {
   return (
-    <div  className='hover:scale-103 transition-all ease-in-out duration-300    md:px-10 px-5 rounded-[15px] border-t-4 border-[#2E68FD]  bg-[#FFFFFF] lg:mx-5 md:mx-3 mx-2     '   >
+    <div  className='  transition-all ease-in-out duration-300    md:px-10 px-5 rounded-[15px] border-t-4 border-[#2E68FD]  bg-[#FFFFFF] lg:mx-5 md:mx-3 mx-2     '   >
         
         {/* title */}
         <h3 className="cmnHeadingtwo lg:mt-10 md:mt-7 mt-4   ">{title}</h3>
