@@ -20,31 +20,9 @@ import test1 from "../../assets/images/test1.png";
 import test2 from "../../assets/images/test2.png";
 import pricingShap from "../../assets/images/pricingShap.png";
 import Image from "next/image";
+import SliderBtbGroup from "@/src/components/customes/SliderBtbGroup";
 const TestimonialCard = dynamic(() => import("./TestimonialCard"), { ssr: false });
 
-const ButtonGroup = ({ next, previous }: any) => {
-  return (
-    <div className="flex items-center gap-2 mt-10 justify-center lg:justify-start  ">
-      {/* prev button */}
-      <button
-        onClick={() => previous()}
-        type="button"
-        className=" group border border-[#CFD0D1] hover:border-[#01081B] hover:bg-[#01081B] w-[56px] h-[56px] rounded-full grid place-items-center  duration-300 cursor-pointer  "
-      >
-        <IoIosArrowBack className="duration-300 text-2xl text-[#4D525F] group-hover:text-[#FFFFFF] " />
-      </button>
-
-      {/* next button */}
-      <button
-        onClick={() => next()}
-        type="button"
-        className=" group border border-[#CFD0D1] hover:border-[#01081B] hover:bg-[#01081B] w-[56px] h-[56px] rounded-full grid place-items-center  duration-300 cursor-pointer rotate-[180deg]  "
-      >
-        <IoIosArrowBack className="duration-300 text-2xl text-[#4D525F] group-hover:text-[#FFFFFF] " />
-      </button>
-    </div>
-  );
-};
 
 export default function Testimonial() {
   const allTestimonials = [
@@ -128,7 +106,7 @@ export default function Testimonial() {
     carouselRef.current?.previous();
   };
 
-  const testimonialRef = React.useRef<HTMLDivElement>(null);
+  const testimonialRef =  useRef<HTMLDivElement>(null);
   const isInView = useInView(testimonialRef, { margin: "-100px" });
 
   return (
@@ -150,7 +128,7 @@ export default function Testimonial() {
 
             {/* slider button */}
             <motion.div initial={{ opacity: 0 , x:50 }} animate={{ opacity: isInView ? 1 : 0 , x: isInView ? 0 : 50 }} transition={{ duration: 1 , delay: 0.4 }}   > 
-              <ButtonGroup next={handleNext} previous={handlePrev} />
+              <SliderBtbGroup next={handleNext} previous={handlePrev} />
             </motion.div>
           </div>
 

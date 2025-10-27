@@ -11,6 +11,7 @@ import Footer from "@/src/sections/footer/Footer";
 import KYC from "@/src/sections/kyc/KYC";
 import FAQ from "@/src/sections/faq/FAQ";
 import GlobalScale from "@/src/sections/globalScale/GlobalScale";
+import Support from "@/src/sections/support/Support";
 
 export default function Home() {
   return (
@@ -48,7 +49,11 @@ export default function Home() {
 
       {/* scale section */}
       <GlobalScale/>
-      
+
+
+      {/* support section */}
+      <Support/>
+
 
       {/* CallToAction section */}
       <CallToAction/>
