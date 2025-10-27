@@ -74,7 +74,7 @@ const KYC  = () => {
     ]
 
   return (
-    <section ref={kycref} className=" lg:mt-30 md:mt-25 sm:mt-20 mt-15  relative bg-gradient-to-br from-white via-blue-50 to-indigo-100  py-20 flex items-center justify-center   overflow-hidden">
+    <section ref={kycref} className=" lg:mt-30 md:mt-25 sm:mt-20 mt-15  relative bg-gradient-to-br from-white via-blue-50 to-indigo-100  py-20 flex items-center justify-center   overflow-hidden md:px-5 ">
        
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 overflow-hidden"> 
@@ -82,20 +82,21 @@ const KYC  = () => {
       </div>
       
       <Container>
-        <div className="    flex flex-col md:flex-row items-center relative z-10">
+        <div className="    flex flex-col   lg:flex-row items-center relative z-10">
             
-            <div className="w-full md:w-1/2 mb-16 md:mb-0 text-center md:text-left">  
+            {/* Text */}
+            <div className="w-full  mb-5 md:mb-10 lg:mb-0 text-center md:text-left">  
              
                 <motion.div initial={{ opacity: 0, x: -50 }} animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }} transition={{ duration: 1 }} > 
-                    <SectionHead title="KYC Verification" subtitle=" Protect your identity with our advanced KYC platform. " customeStyle="xl:max-w-[600px] lg:max-w-[500px] md:max-w-[400px] sm:max-w-[350px] max-w-[300px] text-center lg:text-left  " subtitleStyle="xl:max-w-[561px] lg:max-w-[500px] md:max-w-[400px] sm:max-w-[350px] max-w-[300px] text-center lg:text-left  " />
+                    <SectionHead title="KYC Verification" subtitle=" Protect your identity with our advanced KYC platform. " customeStyle=" max-w-[500px]  lg:max-w-[600px] text-center lg:text-left mx-auto lg:mx-0  " subtitleStyle="  text-center lg:text-left  " />
                 </motion.div>
         
 
-                <p className="cnmPeragraph lg:mt-7 md:mt-5 mt-3 w-[80%]  ">
+                <p className="cnmPeragraph lg:mt-7 md:mt-5 mt-3 w-[80%] mx-auto lg:mx-0 text-center lg:text-left  ">
                     Experience the future of identity verification with our KYC platform. <span className="  font-urbanist font-bold font-lg text-[#2E68FD]  ">99.9% accuracy</span> , instant results, and global compliance.
                 </p>
     
-                <div className="flex flex-col sm:flex-row gap-6 items-center md:items-start lg:mt-10 md:mt-7 mt-5  "> 
+                <div className="flex flex-col sm:flex-row gap-6 items-center justify-center lg:justify-start lg:items-start lg:mt-10 md:mt-7 mt-5  "> 
                     
                     <Link href="#" className="bg-[#2E68FD] rounded-[30px] py-3 px-6 text-base font-outfit text-[#ffffff] font-semibold group " > 
                     Start Verification
@@ -108,7 +109,7 @@ const KYC  = () => {
                 </div>
 
         
-                <div className="mt-16 flex flex-col gap-5     text-gray-600">
+                <div className="lg:mt-16 mt-5 md:mt-10 flex flex-col sm:flex-row lg:flex-col justify-center lg:justify-start items-center  lg:items-start gap-5     text-gray-600">
                     {kycbenefits.map((benefit , index) => (
                         
                         <div key={index} className="flex items-center gap-3">
@@ -121,8 +122,9 @@ const KYC  = () => {
                 </div>
             </div>
 
-             
-            <div className="w-full md:w-1/2 flex justify-center relative">
+
+            {/* Image */}
+            <div className="w-full  flex justify-center relative    ">
                 <div className="relative w-full max-w-2xl">
                     
                     <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl border border-gray-200/80 p-8 shadow-2xl">
@@ -145,28 +147,28 @@ const KYC  = () => {
                         </div>
                     </div>
 
-                    {/* Verification Progress */}
-                    <div className="mb-6">
-                        <div className="flex justify-between text-sm text-gray-600 mb-2">
-                            <span className="cmnHeadingtwo">Verification Progress</span>
-                            <span className="cmnHeadingtwo">85%</span>
+                        {/* Verification Progress */}
+                        <div className="mb-6">
+                            <div className="flex justify-between text-sm text-gray-600 mb-2">
+                                <span className="cmnHeadingtwo">Verification Progress</span>
+                                <span className="cmnHeadingtwo">85%</span>
+                            </div>
+                            <div className="w-full bg-gray-200 rounded-full h-3">
+                                <div className="bg-gradient-to-r from-cyan-500 to-blue-600 h-3 rounded-full w-4/5 shadow-lg shadow-blue-500/25 animate-pulse"></div>
+                            </div>
                         </div>
-                        <div className="w-full bg-gray-200 rounded-full h-3">
-                            <div className="bg-gradient-to-r from-cyan-500 to-blue-600 h-3 rounded-full w-4/5 shadow-lg shadow-blue-500/25 animate-pulse"></div>
-                        </div>
-                    </div>
 
-                    
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                        {kycProcess.map((process , index) => (
-                        <div className={`flex items-center gap-2  ${process.color} ont-outfit font-normal `}  >
-                            <div className={`w-2 h-2  ${process.bg}  rounded-full animate-pulse  `}/>
-                            <span className="ont-outfit font-semibold text-sm ">{process.name}</span>
-                        </div>
+                        
+                        <div className="grid grid-cols-2 gap-4 text-sm">
+                            {kycProcess.map((process , index) => (
+                            <div className={`flex items-center gap-2  ${process.color} ont-outfit font-normal `}  >
+                                <div className={`w-2 h-2  ${process.bg}  rounded-full animate-pulse  `}/>
+                                <span className="ont-outfit font-semibold text-sm ">{process.name}</span>
+                            </div>
+                                
+                            ))}
                             
-                        ))}
-                         
-                    </div>
+                        </div>
                     </div>
 
                     
