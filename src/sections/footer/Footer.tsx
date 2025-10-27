@@ -43,7 +43,7 @@ export default function Footer() {
             <p className="mt-4 font-outfit font-normal text-base text-[#4D525F] leading-[150%]  max-w-[278px]     ">Easy Pay offers secure, seamless, and fee-free payments for effortless global transactions.</p>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }} transition={{ duration: 0.5 }} className=" flex md:justify-end gap-25 mt-10 lg:mt-0  ">
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }} transition={{ duration: 0.5 }} className=" flex md:justify-end lg:gap-25 md:gap-18 sm:gap-14 gap-10 mt-10 lg:mt-0  ">
             {links.map((link , index) => (
               <div key={link.title}>
                 <h3 className=" font-urbanist font-bold text-xl text-[#01081B] leading-[120%]   ">{link.title}</h3>
